@@ -23,33 +23,36 @@ För KTH:s ADK-studenter
 Kursspecifik info för labblydelsen finns på kurswebbsidan. Där finns också länkar till testdata och till det Javaprogram 
 du ska modifiera så att det går ungefär 10000 gånger snabbare.
 
-## Input
+## Indata
 Indata består av två delar. Den första delen är ordlistan, som består av ett antal ord i bokstavsordning, ett ord per rad.
 Denna del avslutas av en rad som bara innehåller ett #-tecken. Den andra delen är ett antal felstavade ord som ska rättstavas,
 ett ord per rad. Dom felstavade orden ingår inte i ordlistan. Varje ord i indata består bara av små bokstäver i svenska alfabetet (a-z, å, ä, ö),
 inga mellanslag, skiljetecken eller siffror. Inget ord är 40 tecken eller längre. Teckenkodningen är utf-8.
 
-## Output
+## Utdata
 Programmet ska för varje felstavat ord skriva ut en rad bestående av det felstavade ordet följt av det minimala editeringsavståndet
 inom parentes följt av en lista med alla ord i ordlistan som har minimalt editeringsavstånd till det felstavade ordet. 
 Listan ska vara i bokstavsordning och varje ord i listan ska föregås av mellanslag. 
 Ordlistan har högst en halv miljon ord och antalet felstavade ord i indata är högst 100.
 
-### Sample Input       
+### Test Indata
+```
 maska
 masken
 masker
 maskin
 maskot
-\#
+#
 massa
 ma
 aske
 mskt
+```
 
-### Sample Output
+### Test Utdata
+```
 massa (1) maska
 ma (3) maska
 aske (2) maska masken masker
 mskt (2) maska maskot
-
+```
